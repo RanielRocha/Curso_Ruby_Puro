@@ -1,17 +1,33 @@
 ### MISSÂO ESPECIAL AULA 03
 class Operacoes
     def somar(num1, num2)
-        result = "O resultado de #{num1} + #{num2} é: #{num1 + num2}"
-        # result = num1 + num2
-        # return result
+        result = num1 + num2
+        puts "\nO resultado de #{num1} + #{num2} é: #{result}"
     end
+
     def subtrair(num1, num2)
         result = num1 - num2
-        return result
+        puts "\nO resultado de #{num1} - #{num2} é: #{result}"
     end
+
     def multiplicar(num1, num2)
         result = num1 * num2
-        return result
+        puts "\nO resultado de #{num1} X #{num2} é: #{result}"
+    end
+
+    def dividir(num1, num2)
+        result = num1 / num2
+        puts "\nO resultado de #{num1} / #{num2} é: #{result}"
+    end
+
+    def potenciar(num1, num2)
+        result = num1 ** num2
+        puts "\nO resultado de #{num1} elevado a #{num2} é: #{result}"
+    end
+
+    def modulo(num1, num2)
+        result = num1 % num2
+        puts "\nO resultado do MÓDULO de #{num1} por #{num2} é: #{result}"
     end
 end
 
@@ -32,15 +48,12 @@ def menu(option)
         opcao_sub = gets.chomp.to_i
         submenu(opcao_sub)
     elsif option == 0
-        result = "\nSaindo........"
+        puts "\nSaindo........"
         sleep 1
         exit
     else
-        result = "\nOpção Inválida!!"
+        puts "\nOpção Inválida!!"
     end
-    return result
-    sleep 4
-    system "clear"
 end
 
 def submenu(opcao_sub)
@@ -53,23 +66,17 @@ def submenu(opcao_sub)
     print "Digite o segundo número inteiro: "
     num2 = gets.chomp.to_i
     if opcao_sub == 1
-        # operacao.somar(num1, num2)
-        # operador = '+'
-        # result = "O resultado de #{num1} + #{num2} é: #{num1 + num2}"
+        operacao.somar(num1, num2)
     elsif opcao_sub == 2
         operacao.subtrair(num1, num2)
-        operador = '-'
-        # result = "O resultado de #{num1} - #{num2} é: #{num1 - num2}"
     elsif opcao_sub == 3
         operacao.multiplicar(num1, num2)
-        operador = 'X'
-        # result = "O resultado de #{num1} X #{num2} é: #{num1 * num2}"
-    # elsif opcao_sub == 4
-    #     result = "O resultado de #{num1} / #{num2} é: #{num1 / num2}"
-    # elsif opcao_sub == 5
-    #     result = "O resultado de #{num1} ^ #{num2} é: #{num1 ** num2}"
-    # elsif opcao_sub == 6
-    #     result = "O resultado do MÓDULO de #{num1} por #{num2} é: #{num1 % num2}"
+    elsif opcao_sub == 4
+        operacao.dividir(num1, num2)
+    elsif opcao_sub == 5
+        operacao.potenciar(num1, num2)
+    elsif opcao_sub == 6
+        operacao.modulo(num1, num2)
     elsif opcao_sub == 0
         puts "\nSaindo........"
         sleep 1
@@ -91,44 +98,3 @@ loop do
     option = gets.chomp.to_i
     menu(option)
 end
-
-# ##------------------------------------------------------------------------------------
-# ## Resultado do OneBitCode
-# result = ''
-# loop do
-#     puts result 
-#     puts 'Selecione uma das seguintes opções'
-#     puts '1- Adicionar'
-#     puts '2- Subtrair'
-#     puts '3- Multiplicar'
-#     puts '4- Dividir'
-#     puts '0- Sair'
-#     print 'Opção: '
-
-#     option = gets.chomp.to_i
-
-#     case option 
-#     when 1..4
-#         print 'Digite o primeiro número: '
-#         number1 = gets.chomp.to_i
-
-#         print 'Digite o segundo número: '
-#         number2 = gets.chomp.to_i
-#         case option 
-#         when 1
-#             result = "#{number1} + #{number2} = #{number1 + number2}"
-#         when 2
-#             result = "#{number1} - #{number2} = #{number1 - number2}"
-#         when 3
-#             result = "#{number1} * #{number2} = #{number1 * number2}"
-#         when 4
-#             result = "#{number1} / #{number2} = #{number1 / number2}"
-#         end
-#     when 0
-#         break
-#     else 
-#         result = 'Opção inválida'
-#     end
-#     # Comando que limpa o console
-#     system "clear"
-# end
