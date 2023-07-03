@@ -60,31 +60,60 @@ def submenu(opcao_sub)
     operacao = Operacoes.new
     sleep 0.5
     system "clear"
-    puts "\n--- CALCULADORA SIMPLES em RUBY ---"
-    print "\nDigite o primeiro número inteiro: "
-    num1 = gets.chomp.to_i
-    print "Digite o segundo número inteiro: "
-    num2 = gets.chomp.to_i
+    # puts "\n--- CALCULADORA SIMPLES em RUBY ---"
+    # print "\nDigite o primeiro número inteiro: "
+    # num1 = gets.chomp.to_i
+    # print "Digite o segundo número inteiro: "
+    # num2 = gets.chomp.to_i
     if opcao_sub == 1
+        puts "\n--- CALCULADORA SIMPLES em RUBY ---"
+        print "\nDigite o primeiro número inteiro: "
+        num1 = gets.chomp.to_i
+        print "Digite o segundo número inteiro: "
+        num2 = gets.chomp.to_i
         operacao.somar(num1, num2)
     elsif opcao_sub == 2
+        puts "\n--- CALCULADORA SIMPLES em RUBY ---"
+        print "\nDigite o primeiro número inteiro: "
+        num1 = gets.chomp.to_i
+        print "Digite o segundo número inteiro: "
+        num2 = gets.chomp.to_i
         operacao.subtrair(num1, num2)
     elsif opcao_sub == 3
+        puts "\n--- CALCULADORA SIMPLES em RUBY ---"
+        print "\nDigite o primeiro número inteiro: "
+        num1 = gets.chomp.to_i
+        print "Digite o segundo número inteiro: "
+        num2 = gets.chomp.to_i
         operacao.multiplicar(num1, num2)
     elsif opcao_sub == 4
+        puts "\n--- CALCULADORA SIMPLES em RUBY ---"
+        print "\nDigite o primeiro número inteiro: "
+        num1 = gets.chomp.to_i
+        print "Digite o segundo número inteiro: "
+        num2 = gets.chomp.to_i
         operacao.dividir(num1, num2)
     elsif opcao_sub == 5
+        puts "\n--- CALCULADORA SIMPLES em RUBY ---"
+        print "\nDigite o primeiro número inteiro: "
+        num1 = gets.chomp.to_i
+        print "Digite o segundo número inteiro: "
+        num2 = gets.chomp.to_i
         operacao.potenciar(num1, num2)
     elsif opcao_sub == 6
+        puts "\n--- CALCULADORA SIMPLES em RUBY ---"
+        print "\nDigite o primeiro número inteiro: "
+        num1 = gets.chomp.to_i
+        print "Digite o segundo número inteiro: "
+        num2 = gets.chomp.to_i
         operacao.modulo(num1, num2)
     elsif opcao_sub == 0
         puts "\nSaindo........"
         sleep 1
         exit
     else
-        result = "\nOpção Inválida!!"
+        puts "\nOpção Inválida!!"
     end
-    puts "#{result}"
     sleep 4
     system "clear"
 end
