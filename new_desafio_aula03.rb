@@ -2,32 +2,26 @@
 class Operacoes
     def somar(num1, num2)
         result = num1 + num2
-        puts "\nO resultado de #{num1} + #{num2} é: #{result}"
     end
 
     def subtrair(num1, num2)
         result = num1 - num2
-        puts "\nO resultado de #{num1} - #{num2} é: #{result}"
     end
 
     def multiplicar(num1, num2)
         result = num1 * num2
-        puts "\nO resultado de #{num1} X #{num2} é: #{result}"
     end
 
     def dividir(num1, num2)
         result = num1 / num2
-        puts "\nO resultado de #{num1} / #{num2} é: #{result}"
     end
 
     def potenciar(num1, num2)
         result = num1 ** num2
-        puts "\nO resultado de #{num1} elevado a #{num2} é: #{result}"
     end
 
     def modulo(num1, num2)
         result = num1 % num2
-        puts "\nO resultado do MÓDULO de #{num1} por #{num2} é: #{result}"
     end
 end
 
@@ -53,67 +47,57 @@ def menu(option)
         exit
     else
         puts "\nOpção Inválida!!"
+        sleep 1
+        system 'clear'
     end
+end
+
+def entradaValores
+    sleep 0.5
+    system "clear"
+    puts "\n--- CALCULADORA SIMPLES em RUBY ---"
+    print "\nDigite o primeiro número inteiro: "
+    @num1 = gets.chomp.to_i
+    print "Digite o segundo número inteiro: "
+    @num2 = gets.chomp.to_i
 end
 
 def submenu(opcao_sub)
     operacao = Operacoes.new
-    sleep 0.5
-    system "clear"
-    # puts "\n--- CALCULADORA SIMPLES em RUBY ---"
-    # print "\nDigite o primeiro número inteiro: "
-    # num1 = gets.chomp.to_i
-    # print "Digite o segundo número inteiro: "
-    # num2 = gets.chomp.to_i
     if opcao_sub == 1
-        puts "\n--- CALCULADORA SIMPLES em RUBY ---"
-        print "\nDigite o primeiro número inteiro: "
-        num1 = gets.chomp.to_i
-        print "Digite o segundo número inteiro: "
-        num2 = gets.chomp.to_i
-        operacao.somar(num1, num2)
+        operador = '+'
+        entradaValores
+        result = operacao.somar(@num1, @num2)
     elsif opcao_sub == 2
-        puts "\n--- CALCULADORA SIMPLES em RUBY ---"
-        print "\nDigite o primeiro número inteiro: "
-        num1 = gets.chomp.to_i
-        print "Digite o segundo número inteiro: "
-        num2 = gets.chomp.to_i
-        operacao.subtrair(num1, num2)
+        operador = '-'
+        entradaValores
+        result = operacao.subtrair(@num1, @num2)
     elsif opcao_sub == 3
-        puts "\n--- CALCULADORA SIMPLES em RUBY ---"
-        print "\nDigite o primeiro número inteiro: "
-        num1 = gets.chomp.to_i
-        print "Digite o segundo número inteiro: "
-        num2 = gets.chomp.to_i
-        operacao.multiplicar(num1, num2)
+        operador = 'X'
+        entradaValores
+        result = operacao.multiplicar(@num1, @num2)
     elsif opcao_sub == 4
-        puts "\n--- CALCULADORA SIMPLES em RUBY ---"
-        print "\nDigite o primeiro número inteiro: "
-        num1 = gets.chomp.to_i
-        print "Digite o segundo número inteiro: "
-        num2 = gets.chomp.to_i
-        operacao.dividir(num1, num2)
+        operador = '/'
+        entradaValores
+        result = operacao.dividir(@num1, @num2)
     elsif opcao_sub == 5
-        puts "\n--- CALCULADORA SIMPLES em RUBY ---"
-        print "\nDigite o primeiro número inteiro: "
-        num1 = gets.chomp.to_i
-        print "Digite o segundo número inteiro: "
-        num2 = gets.chomp.to_i
-        operacao.potenciar(num1, num2)
+        operador = 'elevado por'
+        entradaValores
+        result = operacao.potenciar(@num1, @num2)
     elsif opcao_sub == 6
-        puts "\n--- CALCULADORA SIMPLES em RUBY ---"
-        print "\nDigite o primeiro número inteiro: "
-        num1 = gets.chomp.to_i
-        print "Digite o segundo número inteiro: "
-        num2 = gets.chomp.to_i
-        operacao.modulo(num1, num2)
+        operador = 'módulo de'
+        entradaValores
+        result = operacao.modulo(@num1, @num2)
     elsif opcao_sub == 0
         puts "\nSaindo........"
         sleep 1
         exit
     else
         puts "\nOpção Inválida!!"
+        sleep 1
+        exit
     end
+    puts "\nO resultado de #{@num1} #{operador} #{@num2} é: #{result}"
     sleep 4
     system "clear"
 end
