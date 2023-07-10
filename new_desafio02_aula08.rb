@@ -1,11 +1,8 @@
 
 require 'cpf_cnpj'
 
-########    ------ CORREÇÂO A FAZER NOS PJ - Nº CNPJ --------------
-
 module Person
   class Juridic
-    ########    ------ CORREÇÂO A FAZER NOS PJ - Nº CNPJ --------------
     def initialize(nameJud, cnpj)
       @nameJud = nameJud
       @cnpj = cnpj
@@ -39,7 +36,10 @@ module Person
     end
 
     def add
+      puts "---------------------------------"
       cpf = CPF.new(@cpf)
+      puts cpf
+      sleep 5
       if cpf.valid?
         puts "\nO CPF informado é válido."
         sleep 1
@@ -63,12 +63,14 @@ end
 class Verifica_cpf_cnpj
   def verifica_cpf(consulta_cpf)
     cpf = CPF.new(consulta_cpf)
+    puts cpf
+    sleep 8
     if cpf.valid?
       puts "\nO CPF #{cpf.formatted} é válido."
       sleep 2
       system "clear"
     else
-      puts "\nO CPF #{cpf.formatted} não é válido."
+      puts "\nO CPF #{verif_cpf.formatted} não é válido."
       sleep 2
       system "clear"
     end
@@ -76,9 +78,6 @@ class Verifica_cpf_cnpj
   ########    ------ CORREÇÂO A FAZER NOS PJ - Nº CNPJ --------------
   def verifica_cnpj(consulta_cnpj)
     cnpj = CNPJ.new(consulta_cnpj)
-    # cnpj_teste = CNPJ.generate(true)
-    # puts "gerou!!!!! #{cnpj_teste}"
-    # sleep 5
     if cnpj.valid?
       puts "\nO CNPJ #{cnpj.formatted} é válido."
       sleep 2
@@ -99,7 +98,6 @@ def menu(option)
     puts "Selecione uma das seguintes opções:"
     puts '1- Cadastrar Pessoa Física (PF)'
     puts '2- Consultar CPF'
-########    ------ CORREÇÂO A FAZER NOS PJ - Nº CNPJ --------------
     puts '3- Cadastrar Pessoa Jurídica (PJ)'
     puts '4- Consultar CNPJ'
     puts '0- Sair'
@@ -126,7 +124,6 @@ class EntradaValores
   end
 
   def juridic
-    ########    ------ CORREÇÂO A FAZER NOS PJ - Nº CNPJ --------------
     print "\nDigite o nome da PJ a inserir: "
     @nameJud = gets.chomp
     print "Digite o número do CNPJ: "
@@ -143,19 +140,18 @@ def submenu(option)
     puts "\n--- SISTEMA DE PESSOAS FÍSICAS E JURÍDICAS ---"
     puts "CADASTRO DE PESSOA FÍSICA - PF"
     entradaPessoa.physical
-    Person::Physical.new(@nameJud, @cpf).add
+    Person::Physical.new(@name, @cpf).add
   elsif option == 2
     puts "\n--- SISTEMA DE PESSOAS FÍSICAS E JURÍDICAS ---"
     puts "CONSULTA DE CPF"
     print "\nDigite o número do CPF a consultar: "
     @consulta_cpf = gets.chomp.to_i
     consulta_cpf_cnpj.verifica_cpf(@consulta_cpf)
-    ########    ------ CORREÇÂO A FAZER NOS PJ - Nº CNPJ --------------
   elsif option == 3
     puts "\n--- SISTEMA DE PESSOAS FÍSICAS E JURÍDICAS ---"
     puts "CADASTRO DE PESSOA JURÍDICA - PJ"
     entradaPessoa.juridic
-    Person::Juridic.new(@name, @cnpj).add
+    Person::Juridic.new(@nameJud, @cnpj).add
   elsif option == 4
     puts "\n--- SISTEMA DE PESSOAS FÍSICAS E JURÍDICAS ---"
     puts "CONSULTA DE CPF"
@@ -172,8 +168,6 @@ def submenu(option)
   end
 end
 
-
-########    ------ CORREÇÂO A FAZER NOS PJ - Nº CNPJ --------------
 loop do
   puts "\n--- SISTEMA DE PESSOAS FÍSICAS E JURÍDICAS ---"
   puts "Selecione uma das seguintes opções:"
