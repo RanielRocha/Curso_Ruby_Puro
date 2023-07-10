@@ -1,3 +1,6 @@
+### MISSÂO ESPECIAL AULA 02
+## Crie um programa que que receba dois números inteiros e no final exiba a soma, subtração, adição e divisão entre eles.
+
 print "Digite o primeiro número inteiro: "
 num1 = gets.chomp.to_i
  
@@ -11,6 +14,8 @@ div = num1 / num2
 
 puts "\nO resultado das operações entre os dois números é: \nAdição: #{add}; \nSubtração: #{subt}; \nMultiplicação: #{mult}; \nDivisão: #{div}"
 
+## ----------------
+## Sugestão de como fazer utilizando como exemplo um array
 # array = [10, 5, 50, 2, 80, 4]
 # soma = array[1] + array[3]
 # mod = array[0]%array[5]

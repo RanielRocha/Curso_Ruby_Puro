@@ -1,4 +1,5 @@
-# Crie um programa que possua um método que resolva a potência dado um número base e seu expoente. Estes dois valores devem ser informados pelo usuário.
+### MISSÂO ESPECIAL AULA 05
+## Crie um programa que possua um método que resolva a potência dado um número base e seu expoente. Estes dois valores devem ser informados pelo usuário.
 
 def menu(option)
   if option == 1

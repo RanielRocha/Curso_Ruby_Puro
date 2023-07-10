@@ -1,3 +1,5 @@
+### MISSÂO ESPECIAL AULA 08
+## Aprimoramento do código 'desafio02_aula08.rb', onde além de implementar os menus interativos para o usuário fazer sua escolha, é realizado a validação do número de CPF/CNPJ utilizando a Gem 'cpf_cnpj' e a impressão formatado com a separação correto dos caracteres.
 
 require 'cpf_cnpj'
 

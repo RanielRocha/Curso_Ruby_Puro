@@ -1,3 +1,9 @@
+### MISSÂO ESPECIAL AULA 06
+## Agora que você sabe o que é Programação Orientada a Objetos, crie um programa seguindo o paradigma montado no desafio.
+## E após isso:
+## As classes JogadorDeFutebol e Maratonista devem herdar os comportamentos da classe Esportista.
+## No final do programa execute os métodos competir e correr em objetos do tipo JogadorDeFutebol e Maratonista.
+
 class Esportista
   def competir
     puts "Participando de uma competição!!"

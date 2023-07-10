@@ -1,8 +1,9 @@
-# Crie uma lambda que recebe um nome como parâmetro e o imprime com a primeira letra maiúscula. Esta lambda deverá ser salva dentro de uma variável que será passada como argumento de um método chamado capitalize_name.
+### MISSÂO ESPECIAL AULA 08
+## Crie uma lambda que recebe um nome como parâmetro e o imprime com a primeira letra maiúscula. Esta lambda deverá ser salva dentro de uma variável que será passada como argumento de um método chamado capitalize_name.
+## Dentro deste método você chamará a lambda duas vezes, passando como parâmetro em cada uma delas um nome diferente.    
 
-# Dentro deste método você chamará a lambda duas vezes, passando como parâmetro em cada uma delas um nome diferente.    
-
-first_maiuscula = lambda {puts "O nome atualizado é: #{@name.capitalize}"}
+# 'capitalize' é um método para tornar a primeira letra de uma string maiúscula.  
+first_maiuscula = lambda {puts "O nome atualizado é: #{@name.capitalize}"} 
 
 def capitalize_name(first_maiuscula)
   i = 1

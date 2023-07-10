@@ -1,4 +1,6 @@
 ### MISSÂO ESPECIAL AULA 03
+## Aprimoramento da versão inicial da "Calculadora" do arquivo 'desafio_aula02.rb', onde foi montado alguns menus interativos para o usuário entrar com a opção desejada em cada etapa.
+
 class Operacoes
     def somar(num1, num2)
         result = num1 + num2

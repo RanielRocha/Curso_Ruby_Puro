@@ -1,6 +1,8 @@
-# No arquivo mercado.rb crie uma classe chamada Mercado que ao ser inicializada recebe como atributo um objeto da classe Produto.
+### MISSÂO ESPECIAL AULA 07
+## Neste projeto você simulará o ato de escolher e comprar um produto em um mercado.
 
-# Dentro da classe, crie um método chamado comprar que imprime a seguinte frase “Você comprou o produto #{@produto.nome} no valor de #{@produto.preco}”  
+## No arquivo mercado.rb crie uma classe chamada Mercado que ao ser inicializada recebe como atributo um objeto da classe Produto.
+## Dentro da classe, crie um método chamado comprar que imprime a seguinte frase “Você comprou o produto #{@produto.nome} no valor de #{@produto.preco}”  
 
 class Mercado < Produto
   def initialize(nome, preco)

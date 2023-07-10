@@ -1,4 +1,6 @@
-# Crie um módulo chamado Person com as classes Juridic e Physical. 
+### MISSÂO ESPECIAL AULA 08
+## Crie um módulo chamado Person com as classes Juridic e Physical.
+## Ao executar com as instruções passadas, o código deve retornar como no formato abaixo no método (def add)
 
 module Person
   class Juridic
